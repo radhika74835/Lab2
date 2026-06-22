@@ -27,9 +27,8 @@
                         </manifest>
                     </archive>
                 </configuration>
-
-            </plugin>
-            <plugin>
+             </plugin>
+              <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>3.5.0</version>
                 <executions>
@@ -41,10 +40,10 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/target/extra-resources</outputDirectory>
+                            <outputDirectory>${project.basedir}/docs</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>src/non-packaged-resources</directory>
+                                    <directory>src/main/resources</directory>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>
@@ -52,9 +51,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
-
     </build>
-
-
 </project>
